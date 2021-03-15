@@ -20,6 +20,7 @@ export const Home = () => {
       document.getElementById('error').innerHTML = null;
 
     }else {
+      document.getElementById('result').innerHTML = null;
       document.getElementById('error').innerHTML = `Por favor, preencha os campos.`;
     }
   }
