@@ -14,9 +14,7 @@ export const Home = () => {
       let varFuelValue = parseFloat(document.getElementById('fuelValue').value);
       let varAmount = parseFloat(document.getElementById('amount').value);
 
-      liters = varAmount / varFuelValue;
-
-      console.log(varFuelValue)
+      liters = (varAmount / varFuelValue).toFixed(2);
 
       document.getElementById('result').innerHTML = `Você obterá ${liters} litros.`;
       document.getElementById('error').innerHTML = null;
@@ -41,6 +39,7 @@ export const Home = () => {
         </div>
         <img src="../images/camaro.png" alt="Camaro" className={styles.camaroImage}/>
       </div>
+      {/* eslint-disable-next-line */}
       <h1 id='result'></h1>
     </div>
   )
