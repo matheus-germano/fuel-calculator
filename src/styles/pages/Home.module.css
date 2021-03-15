@@ -10,6 +10,7 @@
   justify-content: center;
 
   margin: 0 auto;
+  padding: 30px;
 }
 
 .homeRow {
@@ -35,10 +36,14 @@
   width: 80%;
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .fuelFormInput {
   width: 100%;
+  max-width: 300px;
   height: 60px;
 
   border-radius: 10px;
@@ -65,6 +70,7 @@
 
 .fuelFormButton {
   width: 100%;
+  max-width: 300px;
   height: 60px;
 
   border-radius: 10px;
@@ -116,7 +122,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+
   .camaroImage {
     width: 80%;
     height: auto;
