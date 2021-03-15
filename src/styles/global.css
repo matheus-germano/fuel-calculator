@@ -1,0 +1,27 @@
+:root {
+  --background: #f1f2f5;
+  --text: #333;
+  --disabled: #999;
+  --white: #fff;
+  --red: #d73646;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+
+  font: 400 1rem "Montserrat", sans-serif;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+}

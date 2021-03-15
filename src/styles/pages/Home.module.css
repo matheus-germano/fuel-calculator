@@ -1,0 +1,124 @@
+.homeContainer {
+  width: 100%;
+  max-width: 1300px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.homeRow {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 100px 0;
+}
+
+.formContainer {
+  width: 90%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.fuelForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fuelFormInput {
+  width: 100%;
+  height: 60px;
+
+  border-radius: 10px;
+
+  background-color: var(--white);
+
+  padding: 20px;
+  margin: 15px 0;
+
+  color: var(--text);
+  font: 400 1rem "Montserrat", sans-serif;
+}
+
+.fuelFormInput::placeholder {
+  color: var(--disabled);
+  font: 400 1rem "Montserrat", sans-serif;
+}
+
+.fuelFormInput:focus {
+  border: 2px solid var(--red);
+
+  padding: 18px;
+}
+
+.fuelFormButton {
+  width: 100%;
+  height: 60px;
+
+  border-radius: 10px;
+
+  background-color: var(--red);
+  color: var(--white);
+
+  font: 700 1rem "Montserrat", sans-serif;
+
+  margin: 15px 0;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.fuelFormButton:hover {
+  filter: brightness(90%);
+
+  transition: 0.2s;
+}
+
+.error {
+  color: var(--red);
+
+  margin: 0 auto;
+}
+
+.camaroImage {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+}
+
+@media (max-width: 950px) {
+  .homeRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .camaroImage {
+    order: -1;
+    width: 60%;
+    height: auto;
+  }
+
+  .formContainer {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .camaroImage {
+    width: 80%;
+    height: auto;
+  }
+}
