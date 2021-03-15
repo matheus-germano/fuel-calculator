@@ -11,13 +11,19 @@ export const Home = () => {
     setClick(!click)
 
     if(document.getElementById('fuelValue').value !== '' && document.getElementById('amount').value !== '') {
-      let varFuelValue = parseFloat(document.getElementById('fuelValue').value);
-      let varAmount = parseFloat(document.getElementById('amount').value);
 
-      liters = (varAmount / varFuelValue).toFixed(2);
+      if(document.getElementById('fuelValue').value > 0 && document.getElementById('amount').value > 0) {
+        let varFuelValue = parseFloat(document.getElementById('fuelValue').value);
+        let varAmount = parseFloat(document.getElementById('amount').value);
 
-      document.getElementById('result').innerHTML = `Você obterá ${liters} litros.`;
-      document.getElementById('error').innerHTML = null;
+        liters = (varAmount / varFuelValue).toFixed(2);
+
+        document.getElementById('result').innerHTML = `Você obterá ${liters} litros.`;
+        document.getElementById('error').innerHTML = null;
+      }else {
+        document.getElementById('result').innerHTML = null;
+        document.getElementById('error').innerHTML = `Insira valores válidos.`;
+      }
 
     }else {
       document.getElementById('result').innerHTML = null;
